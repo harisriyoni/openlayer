@@ -1,5 +1,5 @@
 export let URLGeoJson = "https://us-central1-gcpospasial.cloudfunctions.net/hllo";
-export let urlPostGCF = "";
+export let urlPostGCF = "https://us-central1-gcpospasial.cloudfunctions.net/POSTGEO";
 export let tableTag="tr";
 export let tableRowClass="content is-small";
 export let tableTemplate=`
