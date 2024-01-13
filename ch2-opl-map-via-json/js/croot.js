@@ -7,7 +7,7 @@ import {getAllCoordinates} from './controller/cog.js';
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("pointTable").getElementsByTagName('tbody')[0];
 
-    fetch("https://raw.githubusercontent.com/harisriyoni/gis/main/geojson.json") // Ganti "data.json" dengan nama file JSON Anda
+    fetch("geojson.json") // Ganti "data.json" dengan nama file JSON Anda
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("polygonTable").getElementsByTagName('tbody')[0];
 
-    fetch("https://raw.githubusercontent.com/harisriyoni/gis/main/geojson.json") // Ganti "data.json" dengan nama file JSON Anda
+    fetch("geojson.json") // Ganti "data.json" dengan nama file JSON Anda
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("polylineTable").getElementsByTagName('tbody')[0];
 
-    fetch("https://raw.githubusercontent.com/harisriyoni/gis/main/geojson.json") // Ganti "data.json" dengan nama file JSON Anda
+    fetch("geojson.json") // Ganti "data.json" dengan nama file JSON Anda
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -75,9 +75,9 @@ import { Vector as VectorLayer } from 'https://cdn.skypack.dev/ol/layer.js';
 import GeoJSON from 'https://cdn.skypack.dev/ol/format/GeoJSON.js';
 
 // Definisikan URL GeoJSON untuk masing-masing jenis fitur
-const polygonGeoJSONUrl = 'https://raw.githubusercontent.com/harisriyoni/gis/main/geojson.json';
-const lineStringGeoJSONUrl = 'https://raw.githubusercontent.com/harisriyoni/gis/main/geojson.json';
-const pointGeoJSONUrl = 'https://raw.githubusercontent.com/harisriyoni/gis/main/geojson.json';
+const polygonGeoJSONUrl = 'geojson.json';
+const lineStringGeoJSONUrl = 'geojson.json';
+const pointGeoJSONUrl = 'geojson.json';
 
 // Buat sumber vektor dan lapisan vektor untuk masing-masing jenis fitur
 const polygonSource = new VectorSource({
